@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Blush & Bows - Handcrafted gift hampers, customized sippers, crochet bouquets, and wishing jars made with love. Order customized gifts via DM.">
+    <title>Blush & Bows 🎀 | Aesthetic Gift Hampers & Custom Gifting Store</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header id="main-header">
+        <div class="nav-container">
+            <a href="#" class="logo" id="header-logo">
+                <span class="logo-icon">🎀</span>
+                <span>Blush & Bows</span>
+            </a>
+            <ul class="nav-links" id="navigation-menu">
+                <li><a href="#hero-section" class="active" id="nav-home">Home</a></li>
+                <li><a href="#products-section" id="nav-products">Products</a></li>
+                <li><a href="#workshop-section" id="nav-workshop">Custom Workshop</a></li>
+                <li><a href="#reviews-section" id="nav-reviews">Reviews</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cart-toggle-btn" aria-label="Open Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cart-counter">0</span>
+                </button>
+                <a href="./Register/register.html" class="profile-btn" id="user-profile-btn">
+                    <i class="fa-regular fa-user"></i>
+                    <span id="profile-text">Login</span>
+                </a>
+                <a href="./Register/register.html?mode=signup" class="profile-btn" id="user-register-btn">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <span id="register-text">Sign Up</span>
+                </a>
+                <button class="hamburger" id="mobile-menu-btn" aria-label="Open Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero-section">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <span class="hero-tag">Handcrafted in India 📍</span>
+                <h1>Crafting Smiles, <span>Wrapped</span> in Pink & Gold</h1>
+                <p>Welcome to Blush & Bows! We create cute, custom-made gift hampers, custom sipper tumblers, handmade
+                    crochet bouquets, and dreamy wishing jars tailored to warm your loved one's heart.</p>
+                <div class="hero-btns">
+                    <a href="#products-section" class="btn-primary" id="hero-shop-now">Shop Pre-made</a>
+                    <a href="#workshop-section" class="btn-outline" id="hero-build-custom">Build a Hamper</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="hero-image-wrapper">
+                    <img src="assets/hero_showcase.png" alt="Blush & Bows Aesthetic Gift Hamper"
+                        id="hero-featured-image">
+                </div>
+                <div class="floating-badge badge-1" id="float-badge-gifts">
+                    <div class="badge-icon">🎁</div>
+                    <div class="badge-text">
+                        <p>100% Customized</p>
+                        <span>Personalized gifts</span>
+                    </div>
+                </div>
+                <div class="floating-badge badge-2" id="float-badge-shipping">
+                    <div class="badge-icon">🚚</div>
+                    <div class="badge-text">
+                        <p>Shipping Pan-India</p>
+                        <span>Straight to your door</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT CATALOG -->
+    <section class="section" id="products-section">
+        <h2 class="section-title">Our Bestsellers</h2>
+        <div class="product-grid" id="product-list-container">
+            <!-- Product 1 -->
+            <div class="product-card" data-id="p1">
+                <div class="product-img-wrapper">
+                    <img src="assets/hero_showcase.png" alt="Aesthetic Dreamy Hamper">
+                    <span class="product-tag">Bestseller</span>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Aesthetic Dreamy Hamper</h3>
+                        <p class="product-desc">A premium, cozy combination containing a decorative scented candle,
+                            customizable ceramic mug, fluffy socks, and handmade flower items.</p>
+                    </div>
+                    <div class="product-meta">
+                        <span class="product-price">₹1,499</span>
+                        <button class="add-to-cart-btn" aria-label="Add Aesthetic Dreamy Hamper to Cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card" data-id="p2">
+                <div class="product-img-wrapper">
+                    <img src="assets/custom_sipper.png" alt="Custom Glass Sipper Cup">
+                    <span class="product-tag">Customizable</span>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Custom Bamboo Glass Sipper</h3>
+                        <p class="product-desc">Aesthetic glass tumbler featuring a bamboo lid, reusable glass straw,
+                            and personalized name vinyl decals with cute floral designs.</p>
+                    </div>
+                    <div class="product-meta">
+                        <span class="product-price">₹499</span>
+                        <button class="add-to-cart-btn" aria-label="Add Custom Glass Sipper to Cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card" data-id="p3">
+                <div class="product-img-wrapper">
+                    <img src="assets/crochet_bouquet.png" alt="Handmade Crochet Flower Bouquet">
+                    <span class="product-tag">Handmade</span>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Cozy Crochet Flower Bouquet</h3>
+                        <p class="product-desc">Everlasting hand-knit crochet tulips and daisies, beautifully wrapped in
+                            soft pink paper and tied with a large satin bow.</p>
+                    </div>
+                    <div class="product-meta">
+                        <span class="product-price">₹799</span>
+                        <button class="add-to-cart-btn" aria-label="Add Cozy Crochet Flower Bouquet to Cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card" data-id="p4">
+                <div class="product-img-wrapper">
+                    <img src="assets/gift_jar.png" alt="Fairy Light wishing jar">
+                    <span class="product-tag">Cute Gift</span>
+                </div>
+                <div class="product-info">
+                    <div>
+                        <h3>Dreamy Fairy Light Wishing Jar</h3>
+                        <p class="product-desc">A beautiful glowing jar filled with warm LED fairy lights and custom
+                            tiny scrolls tied with threads for your personal messages.</p>
+                    </div>
+                    <div class="product-meta">
+                        <span class="product-price">₹399</span>
+                        <button class="add-to-cart-btn" aria-label="Add Dreamy Fairy Light Wishing Jar to Cart">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOM BUILDER WORKSHOP -->
+    <section class="section workshop" id="workshop-section">
+        <h2 class="section-title">Build Your Own Hamper Workshop</h2>
+        <div class="workshop-container">
+            <!-- Left Side: Real-time Preview -->
+            <div class="workshop-preview" id="hamper-live-preview">
+                <div class="preview-box">
+                    <span class="preview-box-icon" id="preview-box-emoji"><i class="fa-solid fa-box-open"></i></span>
+                    <div class="preview-filler" id="preview-filler-paper"></div>
+                    <div class="preview-addons" id="preview-addons-container">
+                        <!-- Addon emojis loaded dynamically by JS -->
+                    </div>
+                </div>
+                <div class="preview-details">
+                    <h3 id="preview-hamper-title">Custom Blush Hamper</h3>
+                    <p class="preview-summary" id="preview-hamper-summary">Small Box + Pink Filler paper</p>
+                    <div class="preview-total" id="preview-hamper-total">₹150</div>
+                    <button class="btn-primary" id="add-custom-hamper-btn">Add Hamper to Bag</button>
+                </div>
+            </div>
+
+            <!-- Right Side: Customizing Steps -->
+            <div class="workshop-steps">
+                <!-- Step 1: Choose Box -->
+                <div class="step-wrapper" id="workshop-step-1">
+                    <div class="step-indicator">
+                        <span class="step-number">1</span>
+                        <span>Select Box Size</span>
+                    </div>
+                    <div class="option-grid" id="box-options-grid">
+                        <div class="option-card active" data-type="box" data-id="box-small" data-name="Small Box"
+                            data-price="150" data-emoji="📦">
+                            <div class="option-icon">📦</div>
+                            <h4>Small Box</h4>
+                            <p>₹150</p>
+                        </div>
+                        <div class="option-card" data-type="box" data-id="box-medium" data-name="Medium Box"
+                            data-price="250" data-emoji="🎁">
+                            <div class="option-icon">🎁</div>
+                            <h4>Medium Box</h4>
+                            <p>₹250</p>
+                        </div>
+                        <div class="option-card" data-type="box" data-id="box-large" data-name="Large Box"
+                            data-price="350" data-emoji="💝">
+                            <div class="option-icon">💝</div>
+                            <h4>Large Box</h4>
+                            <p>₹350</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Select Filler -->
+                <div class="step-wrapper" id="workshop-step-2">
+                    <div class="step-indicator">
+                        <span class="step-number">2</span>
+                        <span>Choose Filler Color</span>
+                    </div>
+                    <div class="color-options" id="filler-options-grid">
+                        <div class="color-card active" data-type="filler" data-id="filler-pink"
+                            data-name="Pink Shredded Paper" data-color="#ffb3c6">
+                            <div class="color-dot" style="background-color: #ffb3c6;"></div>
+                            <span>Blush Pink</span>
+                        </div>
+                        <div class="color-card" data-type="filler" data-id="filler-yellow"
+                            data-name="Yellow Shredded Paper" data-color="#fff275">
+                            <div class="color-dot" style="background-color: #fff275;"></div>
+                            <span>Pastel Yellow</span>
+                        </div>
+                        <div class="color-card" data-type="filler" data-id="filler-kraft"
+                            data-name="Natural Kraft Paper" data-color="#ddc6b4">
+                            <div class="color-dot" style="background-color: #ddc6b4;"></div>
+                            <span>Natural Kraft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Add Items -->
+                <div class="step-wrapper" id="workshop-step-3">
+                    <div class="step-indicator">
+                        <span class="step-number">3</span>
+                        <span>Add Cozy Gifts & Treats</span>
+                    </div>
+                    <div class="addon-list" id="addons-list-container">
+                        <div class="addon-item" data-type="addon" data-id="addon-mug" data-name="Custom Ceramic Mug"
+                            data-price="300" data-emoji="☕">
+                            <div class="addon-details">
+                                <span class="addon-emoji">☕</span>
+                                <span class="addon-name">Custom Ceramic Mug <span
+                                        class="addon-price">(+₹300)</span></span>
+                            </div>
+                            <span class="checkbox-icon"><i class="fa-regular fa-square"></i></span>
+                        </div>
+                        <div class="addon-item" data-type="addon" data-id="addon-candle"
+                            data-name="Aesthetic Scented Candle" data-price="200" data-emoji="🕯️">
+                            <div class="addon-details">
+                                <span class="addon-emoji">🕯️</span>
+                                <span class="addon-name">Aesthetic Scented Candle <span
+                                        class="addon-price">(+₹200)</span></span>
+                            </div>
+                            <span class="checkbox-icon"><i class="fa-regular fa-square"></i></span>
+                        </div>
+                        <div class="addon-item" data-type="addon" data-id="addon-card" data-name="Handwritten Wish Card"
+                            data-price="100" data-emoji="💌">
+                            <div class="addon-details">
+                                <span class="addon-emoji">💌</span>
+                                <span class="addon-name">Handwritten Wish Card <span
+                                        class="addon-price">(+₹100)</span></span>
+                            </div>
+                            <span class="checkbox-icon"><i class="fa-regular fa-square"></i></span>
+                        </div>
+                        <div class="addon-item" data-type="addon" data-id="addon-socks" data-name="Fluffy Cozy Socks"
+                            data-price="150" data-emoji="🧦">
+                            <div class="addon-details">
+                                <span class="addon-emoji">🧦</span>
+                                <span class="addon-name">Fluffy Cozy Socks <span
+                                        class="addon-price">(+₹150)</span></span>
+                            </div>
+                            <span class="checkbox-icon"><i class="fa-regular fa-square"></i></span>
+                        </div>
+                        <div class="addon-item" data-type="addon" data-id="addon-chocolates"
+                            data-name="Handmade Chocolate Box" data-price="120" data-emoji="🍫">
+                            <div class="addon-details">
+                                <span class="addon-emoji">🍫</span>
+                                <span class="addon-name">Handmade Chocolate Box <span
+                                        class="addon-price">(+₹120)</span></span>
+                            </div>
+                            <span class="checkbox-icon"><i class="fa-regular fa-square"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS CAROUSEL -->
+    <section class="section reviews-section" id="reviews-section">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="reviews-carousel-container">
+            <div class="reviews-carousel" id="reviews-slider-track">
+                <!-- Slide 1 -->
+                <div class="review-slide">
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"Ordered a customized hamper for my friend's birthday and she absolutely
+                            loved it! The packaging was so aesthetic, and the candle smelled heavenly. 10/10 recommend
+                            Blush & Bows!"</p>
+                        <p class="reviewer-name">Anjali Sharma</p>
+                        <p class="reviewer-desc">Verified Instagram Buyer</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="review-slide">
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"The glass sipper is literally my favorite cup now. The bamboo lid is
+                            high quality, and the name decals are printed so neatly. Customer service was super sweet!"
+                        </p>
+                        <p class="reviewer-name">Riya Goel</p>
+                        <p class="reviewer-desc">Custom Sipper Buyer</p>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="review-slide">
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="review-text">"I ordered a crochet tulip bouquet as an anniversary gift. It is
+                            beautifully crafted and won't ever fade. A wonderful alternative to real flowers. Super
+                            prompt delivery."</p>
+                        <p class="reviewer-name">Aditya Sen</p>
+                        <p class="reviewer-desc">Gift Buyer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider controls -->
+            <button class="carousel-btn prev" id="slider-prev-btn" aria-label="Previous Review"><i
+                    class="fa-solid fa-chevron-left"></i></button>
+            <button class="carousel-btn next" id="slider-next-btn" aria-label="Next Review"><i
+                    class="fa-solid fa-chevron-right"></i></button>
+
+            <!-- Dots indicator -->
+            <div class="carousel-dots" id="carousel-dots-container">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2>Blush & Bows 🎀</h2>
+                <p>Curating smiles with cute, customized hampers, handmade crochet bouquets, personalized glass sippers,
+                    and wishing jars. Made with love in India.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/blush_bows05/" class="social-link" target="_blank"
+                        aria-label="Follow us on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Contact us via WhatsApp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero-section">Home</a></li>
+                    <li><a href="#products-section">Catalog</a></li>
+                    <li><a href="#workshop-section">Hamper Builder</a></li>
+                    <li><a href="#reviews-section">Customer Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Get in Touch</h3>
+                <div class="footer-contact-item">
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <p>contact.blushbows@gmail.com</p>
+                </div>
+                <div class="footer-contact-item">
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <p>@blush_bows05 (DM to order)</p>
+                </div>
+                <div class="footer-contact-item">
+                    <span><i class="fa-solid fa-location-dot"></i></span>
+                    <p>Shipping Nationwide, India 📍</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Blush & Bows. All rights reserved.</p>
+            <p>Made with love 💖</p>
+        </div>
+    </footer>
+
+    <!-- SHOPPING CART DRAWER -->
+    <div class="cart-overlay" id="shopping-cart-overlay">
+        <div class="cart-drawer" id="shopping-cart-drawer">
+            <div class="cart-header">
+                <h2>Your Shopping Bag 🛍️</h2>
+                <button class="close-cart-btn" id="close-cart-drawer-btn" aria-label="Close Shopping Cart"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
+            <!-- Cart Content -->
+            <div class="cart-items" id="cart-items-container">
+                <!-- Cart Empty Message -->
+                <div class="cart-empty-message" id="cart-empty-state">
+                    <span class="cart-empty-icon">🧸</span>
+                    <p>Your bag is empty. Start adding some cute items or build your own custom hamper!</p>
+                </div>
+                <!-- Cart items list dynamically injected here -->
+            </div>
+            <!-- Cart Footer -->
+            <div class="cart-footer">
+                <div class="cart-summary-line">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal">₹0</span>
+                </div>
+                <div class="cart-summary-line">
+                    <span>Estimated Shipping</span>
+                    <span id="cart-shipping">Free</span>
+                </div>
+                <div class="cart-summary-line total">
+                    <span>Grand Total</span>
+                    <span id="cart-grandtotal">₹0</span>
+                </div>
+                <!-- Custom Gift Note -->
+                <div class="gift-note-wrapper">
+                    <label for="cart-gift-note">Add a custom gift note: 💌</label>
+                    <textarea id="cart-gift-note"
+                        placeholder="Write a sweet message to go with your gift..."></textarea>
+                </div>
+                <!-- Checkout -->
+                <button class="btn-primary checkout-btn" id="cart-checkout-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Core -->
+    <script src="logics.js"></script>
+</body>
+
+</html>
