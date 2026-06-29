@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Navigation & Auth
     const profileText = document.getElementById("profile-text");
     const userProfileBtn = document.getElementById("user-profile-btn");
-    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-    const navigationMenu = document.getElementById("navigation-menu");
+
 
     // Cart Drawer Elements
     const cartToggleBtn = document.getElementById("cart-toggle-btn");
@@ -79,6 +78,78 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     checkUserLogin();
+
+    // ----------------------------------------------------
+    // ACTIVE NAV PILL – scroll-based highlighting
+    // ----------------------------------------------------
+    const navSectionMap = [
+        { sectionId: "hero-section",     navId: "nav-home" },
+        { sectionId: "products-section", navId: "nav-products" },
+        { sectionId: "workshop-section", navId: "nav-workshop" },
+        { sectionId: "reviews-section",  navId: "nav-reviews" },
+    ];
+
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const match = navSectionMap.find(m => m.sectionId === entry.target.id);
+                if (match) {
+                    document.querySelectorAll(".pill-nav-item").forEach(el => el.classList.remove("active"));
+                    const activeLink = document.getElementById(match.navId);
+                    if (activeLink) activeLink.classList.add("active");
+                }
+            }
+        });
+    }, { threshold: 0.35 });
+
+    navSectionMap.forEach(({ sectionId }) => {
+        const el = document.getElementById(sectionId);
+        if (el) navObserver.observe(el);
+    });
+
+    // ----------------------------------------------------
+    // HEADER SCROLL – add solid bg when user scrolls down
+    // ----------------------------------------------------
+    const mainHeader = document.getElementById("main-header");
+    function handleHeaderScroll() {
+        if (window.scrollY > 60) {
+            mainHeader.classList.add("scrolled");
+        } else {
+            mainHeader.classList.remove("scrolled");
+        }
+    }
+    window.addEventListener("scroll", handleHeaderScroll, { passive: true });
+    handleHeaderScroll(); // Run once on load
+
+    // ----------------------------------------------------
+    // THEME TOGGLE – light / dark mode
+    // ----------------------------------------------------
+    const themeToggleBtn = document.getElementById("theme-toggle-btn");
+    const themeIcon = document.getElementById("theme-icon");
+
+    function applyTheme(isDark) {
+        if (isDark) {
+            document.body.classList.add("dark-theme");
+            themeIcon.className = "fa-solid fa-moon";
+        } else {
+            document.body.classList.remove("dark-theme");
+            themeIcon.className = "fa-solid fa-sun";
+        }
+    }
+
+    // Load saved preference
+    const savedTheme = localStorage.getItem("blush_theme");
+    applyTheme(savedTheme === "dark");
+
+    themeToggleBtn.addEventListener("click", () => {
+        const isDark = !document.body.classList.contains("dark-theme");
+        applyTheme(isDark);
+        localStorage.setItem("blush_theme", isDark ? "dark" : "light");
+        // Spin animation
+        themeIcon.style.transform = "rotate(360deg)";
+        setTimeout(() => { themeIcon.style.transform = ""; }, 500);
+    });
+
 
     // ----------------------------------------------------
     // CART ENGINE
